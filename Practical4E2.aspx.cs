@@ -13,5 +13,12 @@ namespace Practical4
         {
 
         }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            sdsOrder.SelectParameters["EmployeeID"].DefaultValue = ddlName.SelectedValue;
+
+            sdsOrder.SelectParameters["Years"].DefaultValue = rblYear.SelectedValue;
+        }
     }
 }
